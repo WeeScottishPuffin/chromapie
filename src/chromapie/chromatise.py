@@ -1,4 +1,4 @@
-import exceptions
+from .exceptions import *
 
 class ANSI:
     END = "\033[0m"

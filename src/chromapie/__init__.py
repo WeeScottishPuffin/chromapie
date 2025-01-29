@@ -1,1 +1,1 @@
-from chromatise import *
+from .chromatise import *

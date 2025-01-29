@@ -1,4 +1,4 @@
-from chromatise import *
+from .chromatise import *
 
 def add_spaces(val):return val + " " * max(3-len(val),0)
 
