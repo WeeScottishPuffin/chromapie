@@ -3,25 +3,25 @@ from .exceptions import *
 class ANSI:
     END = "\033[0m"
     
-    def col_8bit(id:int,type:str="fore"):
-        if 0 > id or id > 255: raise exceptions.Invalid8Bit(id)
+    def col_8bit(self,id:int,type:str="fore"):
+        if 0 > id or id > 255: raise Invalid8Bit(id)
 
         type_c = ""
         if type == "fore": type_c = "38;5;"
         elif type == "back": type_c = "48;5;"
-        else: raise exceptions.WrongLayerTypeError(type)
+        else: raise WrongLayerTypeError(type)
         
         return "\033[%s%sm"%(type_c,str(id))
         
-    def col_8bit_rgb(r:int,g:int,b:int,type:str="fore"):
-        if 0 > r or r > 255: raise exceptions.Invalid8Bit(r)
-        if 0 > g or g > 255: raise exceptions.Invalid8Bit(g)
-        if 0 > b or b > 255: raise exceptions.Invalid8Bit(b)
+    def col_8bit_rgb(self,r:int,g:int,b:int,type:str="fore"):
+        if 0 > r or r > 255: raise Invalid8Bit(r)
+        if 0 > g or g > 255: raise Invalid8Bit(g)
+        if 0 > b or b > 255: raise Invalid8Bit(b)
 
         type_c = ""
         if type == "fore": type_c = "38;2;"
         elif type == "back": type_c = "48;2;"
-        else: raise exceptions.WrongLayerTypeError(type)
+        else: raise WrongLayerTypeError(type)
         
         return "\033[%s%s;%s;%sm"%(type_c,r,g,b)
 
