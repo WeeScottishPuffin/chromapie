@@ -3,7 +3,7 @@ from .exceptions import *
 class ANSI:
     END = "\033[0m"
     
-    def col_8bit(self,id:int,type:str="fore"):
+    def col_8bit(id:int,type:str="fore"):
         if 0 > id or id > 255: raise Invalid8Bit(id)
 
         type_c = ""
@@ -13,7 +13,7 @@ class ANSI:
         
         return "\033[%s%sm"%(type_c,str(id))
         
-    def col_8bit_rgb(self,r:int,g:int,b:int,type:str="fore"):
+    def col_8bit_rgb(r:int,g:int,b:int,type:str="fore"):
         if 0 > r or r > 255: raise Invalid8Bit(r)
         if 0 > g or g > 255: raise Invalid8Bit(g)
         if 0 > b or b > 255: raise Invalid8Bit(b)
