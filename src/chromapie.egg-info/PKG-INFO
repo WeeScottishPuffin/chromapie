@@ -1,6 +1,6 @@
 Metadata-Version: 2.2
 Name: chromapie
-Version: 0.0.3
+Version: 0.0.3b0
 Summary: A simple ANSI code wrapper I made to learn python packaging.
 Author-email: Naut van der Winden <nautvanderwinden@gmail.com>
 License: MIT License

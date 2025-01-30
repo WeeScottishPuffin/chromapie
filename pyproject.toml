@@ -1,6 +1,6 @@
 [project]
 name = "chromapie"
-version = "0.0.3"
+version = "0.0.3b"
 authors = [
   { name="Naut van der Winden", email="nautvanderwinden@gmail.com" },
 ]
